@@ -146,6 +146,9 @@ defmodule NotebookWeb.Router do
       live "/users/log-in", UserLive.Login, :new
     end
 
+    get "/auth/kanidm", OIDCController, :request
+    get "/auth/kanidm/callback", OIDCController, :callback
+
     post "/users/log-in", UserSessionController, :create
     post "/users/register", RegistrationController, :create
     delete "/users/log-out", UserSessionController, :delete

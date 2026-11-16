@@ -44,6 +44,12 @@ defmodule NotebookWeb.UserLive.Login do
             value="true"
           >Log in <span aria-hidden="true">↗</span></button>
         </.form>
+        <div class="mt-4 pt-4 border-t border-base-content/10">
+          <a href={~p"/auth/kanidm"} class="button w-full flex items-center justify-center gap-2">
+            <span>Sign in with Kanidm</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </section>
     </main>
     """
